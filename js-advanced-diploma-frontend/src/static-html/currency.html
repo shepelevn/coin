@@ -1,0 +1,82 @@
+<section class="currency">
+  <div class="currency__container container">
+    <h1 class="currency__title h1" tabindex="-1">Валютный обмен</h1>
+    <div class="currency__grid">
+      <div class="currency__balance round-block-primary round-block">
+        <div class="round-block-primary__loading round-block__loading" id="currency-loading">
+          <img class="round-block__spinner" src="../images/common/spinner-blue.svg" alt="">
+        </div>
+        <h2 class="h2">Ваши валюты</h2>
+        <ul class="currency-list" id="currency-balance-list">
+
+          <!-- <li class="currency-list__item"> -->
+          <!--   <p class="currency-list__name">ETH</p> -->
+          <!--   <div class="currency-list__leader"></div> -->
+          <!--   <p class="currency-list__price">6.3123545131</p> -->
+          <!-- </li> -->
+
+        </ul>
+      </div>
+      <div class="currency__exchange exchange round-block-primary round-block">
+        <div class="round-block-primary__loading round-block__loading" id="exchange-loading">
+          <img class="round-block__spinner" src="../images/common/spinner-blue.svg" alt="">
+        </div>
+
+        <h2 class="h2">Обмен валюты</h2>
+        <form class="exchange__form" id="exchange-form">
+          <div class="exchange__input-container">
+            <label class="exchange__label label-primary" for="exchange-from">
+              Из
+            </label>
+            <select class="exchange__select select-primary" id="exchange-from" name="from" data-label="Выберите валюту из которой вы хотите перевести">
+              <option class="select-primary__option" value="eth">ETH</option>
+              <option class="select-primary__option" value="btc">BTC</option>
+            </select>
+          </div>
+          <div class="exchange__input-container">
+            <label class="exchange__label label-primary" for="exchange-to">
+              в
+            </label>
+            <select class="exchange__select select-primary" id="exchange-to" name="to" data-label="Выберите валюту в которую вы хотите перевести">
+              <option class="select-primary__option" value="eth">ETH</option>
+              <option class="select-primary__option" value="btc">BTC</option>
+            </select>
+          </div>
+
+          <div class="exchange__amount exchange__input-container">
+            <label class="exchange__label label-primary" for="exchange-amount">
+              Сумма
+            </label>
+            <div class="input-group input-group_inner-icon">
+              <span class="error-message" id="exchange-amount-error" aria-live="polite"></span>
+              <input class="exchange__input input-primary input-primary_icon-inside" id="exchange-amount" name="amount" type="text" data-error-id="exchange-amount-error">
+            </div>
+          </div>
+          <button class="exchange__button button-primary" type="submit">Обменять</button>
+        </form>
+      </div>
+      <div class="currency__rate round-block-secondary round-block">
+        <h2 class="h2">Изменение курсов в реальном времени</h2>
+        <ul class="currency-list" id="currency-rates">
+
+          <!-- <li class="currency-list__item"> -->
+          <!--   <p class="currency-list__name">BTC/ETH</p> -->
+          <!--   <div class="currency-list__leader"></div> -->
+          <!--   <p class="currency-list__price rate-icon rate-icon_up" aria-description="Повышение ставки"> -->
+          <!--     6.3123545131 -->
+          <!--   </p> -->
+          <!-- </li> -->
+
+          <!-- <li class="currency-list__item"> -->
+          <!--   <p class="currency-list__name">BTC/ETH</p> -->
+          <!--   <div class="currency-list__leader"></div> -->
+          <!--   <p class="currency-list__price rate-icon rate-icon_down" aria-description="Понижение ставки"> -->
+          <!--     6.3123545131 -->
+          <!--   </p> -->
+          <!-- </li> -->
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

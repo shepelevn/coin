@@ -1,0 +1,21 @@
+@use 'vars' as vars;
+
+@mixin font-roboto {
+  font-family: vars.$font-roboto;
+  letter-spacing: -0.01em;
+}
+
+@mixin font-ubuntu {
+  font-family: vars.$font-ubuntu;
+  letter-spacing: -0.01em;
+}
+
+@mixin font-open-sans {
+  font-family: vars.$font-opensans;
+  letter-spacing: -0.02em;
+}
+
+@mixin font-work-sans {
+  font-family: vars.$font-worksans;
+  letter-spacing: -0.02em;
+}

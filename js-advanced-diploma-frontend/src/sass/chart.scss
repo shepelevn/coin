@@ -1,0 +1,18 @@
+@use 'vars' as vars;
+
+.chart {
+  display: block;
+  padding-bottom: 36px;
+  padding-right: 44px;
+
+  &__title {
+    margin-bottom: 0;
+  }
+
+  &__canvas {
+    // The hacky way to resize chart. Otherwise responsiveness doesn't work.
+    // Can't come up with a better solution.
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

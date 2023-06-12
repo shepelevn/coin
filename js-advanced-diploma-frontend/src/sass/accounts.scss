@@ -1,0 +1,84 @@
+@use 'vars' as vars;
+@use 'mixins' as mixins;
+
+.accounts {
+  &__container {
+    min-height: 50vh;
+    padding-top: 44px;
+    border-radius: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__left {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__title {
+    margin-right: 35px;
+    align-self: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(min-content, 400px));
+    justify-content: space-between;
+    gap: 50px 30px;
+  }
+}
+
+.account-card {
+  display: inline-block;
+  padding: 22px;
+  color: vars.$color-secondary-1;
+  background: vars.$color-white;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+
+  &__id {
+    @include mixins.font-roboto;
+
+    margin-bottom: 9px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.01em;
+  }
+
+  &__balance {
+    margin-bottom: 9px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+  }
+
+  &__transaction {
+    @include mixins.font-open-sans;
+
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  &__transaction-title {
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 1199px) {
+  .accounts__list {
+    grid-template-columns: repeat(2, minmax(min-content, 400px));
+    justify-content: center;
+    column-gap: 70px;
+  }
+}

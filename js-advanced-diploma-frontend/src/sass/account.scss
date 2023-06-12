@@ -1,0 +1,69 @@
+@use 'vars' as vars;
+
+.account {
+  &__container {
+    display: grid;
+    grid-template-columns: 606px 1fr;
+    grid-template-rows: 288px;
+    gap: 50px;
+    padding-top: 0;
+  }
+
+  &__link {
+    margin: -1px;
+    color: vars.$color-dark;
+    border: 1px solid transparent;
+    transition-property: border-color;
+
+    &:hover {
+      border-color: vars.$color-primary;
+    }
+
+    &:focus-visible {
+      border-color: vars.$color-primary;
+      background-color: rgba(vars.$color-gray-7, 0.5);
+
+      transition-property: none;
+    }
+
+    &:active {
+      border-color: vars.$color-primary-dark;
+
+      transition-property: none;
+    }
+  }
+
+  & .history {
+    grid-column-end: span 2;
+  }
+}
+
+.transaction {
+  display: flex;
+  flex-direction: column;
+
+  &__form {
+    padding-left: 206px;
+  }
+
+  &__input-group {
+    margin-bottom: 23px;
+  }
+
+  &__submit {
+    background-image: url('../images/account/mail.svg');
+  }
+}
+
+@media (max-width: 1399px) {
+  .account {
+    &__container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 400px;
+    }
+
+    & .history {
+      grid-column-end: initial;
+    }
+  }
+}

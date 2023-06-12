@@ -1,0 +1,28 @@
+<section class="login">
+  <div class="login__container round-block-secondary round-block">
+    <div class="round-block-secondary__loading round-block__loading" id="login-loading">
+      <img class="round-block__spinner" src="../images/common/spinner-black.svg" alt="">
+    </div>
+
+    <h1 class="login__title h1" tabindex="-1">
+      Вход в аккаунт
+    </h1>
+    <form class="login__form" id="login-form">
+      <div class="login__input-group input-group">
+        <span class="error-message" id="login-username-error" aria-live="polite"></span>
+        <label class="login__label label-primary" for="login-name">
+          Логин
+        </label>
+        <input class="login__input input-primary" id="login-name" name="username" type="text" placeholder="Введите логин" data-error-id="login-username-error">
+      </div>
+      <div class="login__input-group input-group">
+        <span class="error-message" id="login-password-error" aria-live="polite"></span>
+        <label class="login__label label-primary" for="login-password">
+          Пароль
+        </label>
+        <input class="login__input input-primary" id="login-password" name="password" type="password" placeholder="Введите пароль" data-error-id="login-password-error">
+      </div>
+      <button class="login__button button-primary" type="submit">Войти</button>
+    </form>
+  </div>
+</section>
