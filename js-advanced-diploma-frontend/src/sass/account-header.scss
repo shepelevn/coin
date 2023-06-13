@@ -1,0 +1,46 @@
+@use 'vars' as vars;
+@use 'mixins' as mixins;
+
+.account-header {
+  @include mixins.font-open-sans;
+
+  &__container {
+    padding-top: 44px;
+    padding-bottom: 48px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+  }
+
+  &__back {
+    background-image: url('../images/account/back.svg');
+  }
+
+  &__bottom {
+    @extend .account-header__top;
+
+    margin-bottom: 0;
+  }
+
+  &__id {
+    @include mixins.font-work-sans;
+
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: -0.02em;
+  }
+
+  &__balance {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &__balance-title {
+    margin-right: 50px;
+    font-weight: 700;
+  }
+}

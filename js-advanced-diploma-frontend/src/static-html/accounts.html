@@ -1,0 +1,25 @@
+<section class="accounts">
+  <div class="accounts__container container round-block">
+    <div class="round-block-primary__loading round-block__loading" id="accounts-loading">
+      <img class="round-block__spinner" src="../images/common/spinner-blue.svg" alt="">
+    </div>
+
+    <div class="accounts__header">
+      <div class="accounts__left">
+        <h1 class="accounts__title h1" tabindex="-1">Ваши счета</h1>
+        <select class="accounts__sort select-primary select-primary_placeholder" id="accounts-sort" name="sort" data-label="Сортировка">
+          <!-- <div class="select-primary__placeholder">Сортировка</div> -->
+          <!-- <option class="select-primary__option" value="">Сортировка</option> -->
+          <option class="select-primary__option" value="id">По номеру</option>
+          <option class="select-primary__option" value="balance">По балансу</option>
+          <option class="select-primary__option" value="transaction">По последней транзакции</option>
+        </select>
+      </div>
+      <button class="accounts__create button-primary-icon" id="new-account" type="button">
+        Создать новый счёт
+      </button>
+    </div>
+    <ul class="accounts__list" id="accounts-list">
+    </ul>
+  </div>
+</section>

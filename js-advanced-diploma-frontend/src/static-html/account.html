@@ -1,0 +1,40 @@
+
+<section class="account">
+  <div class="account__container container" id="account-container">
+    <div class="account__transaction transaction round-block-secondary round-block">
+
+      <div class="round-block-secondary__loading round-block__loading" id="transaction-loading">
+        <img class="round-block__spinner" src="../images/common/spinner-black.svg" alt="">
+      </div>
+
+      <h2 class="transaction__title h2">Новый перевод</h2>
+      <form class="transaction__form" id="transaction-form">
+        <div class="transaction__input-group input-group">
+          <span class="error-message" id="transaction-receiver-error"></span>
+          <label class="transaction__label label-primary" for="transaction-receiver">
+            Номер счёта получателя
+          </label>
+          <div class="input-search">
+            <input class="transaction__input input-search__input input-primary" id="transaction-receiver" name="receiver" placeholder="Введите счёт получателя" type="text" autocomplete="off" data-error-id="transaction-receiver-error">
+            <!-- <ul class="input-search__list input-search__list_hidden"></ul> -->
+          </div>
+        </div>
+        <div class="transaction__input-group input-group">
+          <span class="error-message" id="transaction-amount-error" aria-live="polite"></span>
+          <label class="transaction__label label-primary" for="transaction-amount">
+            Сумма перевода
+          </label>
+          <input class="transaction__input input-primary" id="transaction-amount" name="amount" placeholder="Введите сумму для перевода" type="text" data-error-id="transaction-amount-error">
+        </div>
+        <button class="transaction__submit button-primary-icon" type="submit">Отправить</button>
+      </form>
+    </div>
+    <a class="account__chart account__link chart round-block-primary round-block common-transition" id="chart-link" href="balance.html" aria-label="Перейти к истории баланса" data-navigo>
+      <div class="round-block-primary__loading round-block__loading" id="chart-block-loading">
+        <img class="round-block__spinner" src="../images/common/spinner-blue.svg" alt="">
+      </div>
+      <h2 class="chart__title h2">Динамика баланса</h2>
+      <canvas class="chart__canvas" id="account-chart"></canvas>
+    </a>
+  </div>
+</section>

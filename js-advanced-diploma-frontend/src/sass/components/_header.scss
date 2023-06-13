@@ -1,0 +1,51 @@
+@use '../vars' as vars;
+@use '../common' as common;
+
+:root {
+  --header-links-display: block;
+}
+
+.header {
+  min-width: 992px;
+  color: vars.$color-white;
+  background-color: vars.$color-primary;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 50px 20px;
+  }
+
+  &__logo {
+    color: vars.$color-white;
+    font-family: vars.$font-worksans;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+
+    &:focus-visible {
+      opacity: 0.9;
+      outline: 1px solid white;
+      outline-offset: 6px;
+      border-radius: 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  &__link {
+    @extend .button-secondary;
+
+    display: var(--header-links-display);
+  }
+}

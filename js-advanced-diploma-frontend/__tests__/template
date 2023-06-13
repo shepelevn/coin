@@ -1,0 +1,5 @@
+import { forUnitTesting as accountsFunctions } from '../src/scripts/accounts';
+const { sortAccounts } = accountsFunctions;
+
+test('', () => {
+});

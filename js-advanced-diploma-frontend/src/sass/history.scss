@@ -1,0 +1,159 @@
+@use 'vars' as vars;
+
+.history {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 13px;
+
+  &_hidden {
+    display: none;
+  }
+
+  &__link {
+    margin: -1px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    transition: border-color vars.$transition-duration vars.$transition-timing;
+
+    &:hover {
+      border-color: vars.$color-primary;
+    }
+
+    &:focus-visible {
+      transition-property: none;
+      border-color: vars.$color-primary;
+    }
+
+    &:active {
+      transition-property: none;
+      border-color: vars.$color-primary-dark;
+    }
+  }
+
+  &__table {
+    width: 100%;
+  }
+
+  &__pagination {
+    align-self: center;
+    padding-top: 13px;
+  }
+}
+
+.history-table {
+  border-collapse: collapse;
+  color: vars.$color-gray-2;
+  font-size: 16px;
+  line-height: 24px;
+
+  &__header {
+    color: vars.$color-white;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  &__th {
+    padding: 20px 49px;
+    padding-right: 22px;
+    // padding-right: 0;
+    overflow: hidden;
+    background-color: vars.$color-primary;
+    text-align: start;
+
+    &:first-child {
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+  }
+
+  &__th-placeholder {
+    width: 100%;
+  }
+
+  &__tr {
+    border-bottom: 2px solid rgba(0, 82, 255, 0.1);
+  }
+
+  &__td {
+    padding: 21px 22px 26px 49px;
+  }
+}
+
+.money-positive {
+  color: vars.$color-success;
+}
+
+.money-negative {
+  color: vars.$color-secondary-4;
+}
+
+.pagination {
+  &__list {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    color: vars.$color-gray-4;
+    transition-property: color, background-color;
+
+    &:hover {
+      color: vars.$color-primary;
+    }
+
+    &:focus-visible {
+      border-color: vars.$color-primary;
+    }
+
+    &:active {
+      color: vars.$color-secondary-1;
+    }
+
+    &_active {
+      color: vars.$color-white;
+      background-color: vars.$color-primary;
+
+      &:focus-visible {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__icon {
+    height: 10.5px;
+    width: 7.5px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .history-table {
+    &__th {
+      padding-left: 30px;
+    }
+
+    &__td {
+      padding-left: 30px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .history-table {
+    &__th:not(:first-child) {
+      padding-left: 10px;
+    }
+
+    &__td:not(:first-child) {
+      padding-left: 10px;
+    }
+  }
+}

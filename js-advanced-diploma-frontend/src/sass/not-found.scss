@@ -1,0 +1,14 @@
+@use 'vars' as vars;
+
+.not-found {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    color: vars.$color-primary;
+    font-size: 40px;
+  }
+}

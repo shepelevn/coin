@@ -1,0 +1,21 @@
+<section class="balance">
+  <div class="balance__container container" id="balance-container">
+    <div class="balance__chart chart round-block-primary round-block">
+      <div class="round-block-primary__loading round-block__loading" id="balance-chart-loading">
+        <img class="round-block__spinner" src="../images/common/spinner-blue.svg" alt="">
+      </div>
+      <h2 class="chart__title h2">Динамика баланса</h2>
+      <canvas class="chart__canvas" id="balance-dynamic" role="img" aria-description="Что-то пошло не так"></canvas>
+    </div>
+
+    <div class="balance__chart chart round-block-primary round-block">
+      <div class="round-block-primary__loading round-block__loading" id="ratio-chart-loading">
+        <img class="round-block__spinner" src="../images/common/spinner-blue.svg" alt="">
+      </div>
+      <h2 class="chart__title h2">
+        Соотношение входящих исходящих транзакций
+      </h2>
+      <canvas class="chart__canvas" id="balance-ratio" role="img" aria-description="Что-то пошло не так"></canvas>
+    </div>
+  </div>
+</section>
