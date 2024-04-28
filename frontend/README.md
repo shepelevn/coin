@@ -3,6 +3,11 @@
 Frontend part of the banking system for storing and operating on
 cryptocurrency assets.
 
+## README.md
+
+* en [English](README.md)
+* ru [Русский](./readme/README.ru.md)
+
 ## Installation and launch
 
 1. For the application to work you need Node.js and npm
