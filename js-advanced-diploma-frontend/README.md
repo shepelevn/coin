@@ -1,31 +1,31 @@
 # Coin.
 
-Frontend часть банковской системы для хранения и операций над
-криптовалютными средствами.
+Frontend part of the banking system for storing and operating on
+cryptocurrency assets.
 
-## Установка и запуск проекта
+## Installation and launch
 
-1. Для запуска данного проекта вам понадобится Node.js и npm.
-2. Склонируйте данный репозиторий к себе на диск. Затем выполните npm i для установки.
+1. For the application to work you need Node.js and npm
+2. Clone the repository to your disk and run `npm i` to install dependencies
 
-## Команды запуска проекта
+## Project launch scripts
 
-* `npm run dev` - Сборка и запуск проекта в режиме разработки.
-  Запускает локальный сервер на `localhost:8080`
-* `npm run build` - Сборка проекта в режиме production
+* `npm run dev` - Run the development server on `localhost:8080`
+* `npm run build` - Build the project in production mode
 
-## Тестовый аккаунт
+## Testing scripts
 
-Логин: `developer`
-Пароль: `skillbox`
+* `npm run lint` - Check the project in ESLint
+* `npm run test` - Run unit-tests with Jest
+* `npm run e2e` - Run end-to-end tests with Cypress
+* `npm run e2e:headless` - Run end-to-end tests in console without opening
+  the browser
 
-## Команды тестирования проекта
+## Test account
 
-* `npm run lint` - Проверка проекта в ESLint
-* `npm run test` - Запуск unit-тестов в Jest
-* `npm run e2e` - Запуск end-to-end тестов в Cypress
-* `npm run e2e:headless` - Запуск end-to-end тестов в консоли без открытия окна браузера
+Username: `developer`
+Password: `skillbox`
 
-## Примечания
+## Notes
 
-Верстка сайта выполнена для ширины от 992 пикселя.
+The layout is done for the width 992 pixels or larger
