@@ -7,7 +7,9 @@ export default initExchangeRateStream;
 let socketConnectedGlobal = false;
 
 function initExchangeRateStream() {
-  const socket = new WebSocket('ws://localhost:3000/currency-feed');
+  const socket = new WebSocket(
+    `ws://${window.process.env.API_HOST}/currency-feed`
+  );
   const ratesArray = [];
 
   socket.addEventListener('message', (event) => {

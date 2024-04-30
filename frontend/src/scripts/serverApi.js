@@ -1,4 +1,5 @@
-const SERVER_URL = 'http://localhost:3000';
+const SERVER_URL =
+  window.process.env.API_PROTOCOL + window.process.env.API_HOST;
 
 export {
   login,

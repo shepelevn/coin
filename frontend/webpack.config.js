@@ -1,5 +1,7 @@
 /* eslint-disable no-undef */
 
+require('dotenv').config({ path: '.env' });
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -8,6 +10,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const SpritePlugin = require('svg-sprite-loader/plugin');
 const HtmlValidatePlugin = require('html-validate-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const { DefinePlugin } = require('webpack');
 
 module.exports = (env) => ({
   entry: './src/scripts/index.js',
@@ -82,6 +85,9 @@ module.exports = (env) => ({
     new CssMinimizerPlugin(),
     new SpritePlugin(),
     new HtmlValidatePlugin(),
+    new DefinePlugin({
+      'window.process.env': JSON.stringify(process.env),
+    }),
   ],
   optimization: {
     minimizer: [
