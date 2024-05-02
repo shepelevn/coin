@@ -8,7 +8,7 @@ let socketConnectedGlobal = false;
 
 function initExchangeRateStream() {
   const socket = new WebSocket(
-    `ws://${window.process.env.API_HOST}/currency-feed`
+    `${window.process.env.WS_PROTOCOL}${window.process.env.API_HOST}/currency-feed`
   );
   const ratesArray = [];
 
