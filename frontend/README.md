@@ -12,6 +12,7 @@ cryptocurrency assets.
 
 1. For the application to work you need Node.js and npm
 2. Clone the repository to your disk and run `npm i` to install dependencies
+3. Create `.env` file based on `.env-sample`
 
 ## Project launch scripts
 
