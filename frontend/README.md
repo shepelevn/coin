@@ -8,6 +8,13 @@ cryptocurrency assets.
 * en [English](README.md)
 * ru [Русский](./readme/README.ru.md)
 
+## Technologies used in the project
+
+* `Webpack`
+* `HTML`
+* `SASS`
+* `JavaScript`
+
 ## Installation and launch
 
 1. For the application to work you need Node.js and npm
