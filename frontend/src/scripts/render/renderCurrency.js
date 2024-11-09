@@ -135,7 +135,7 @@ function createRatesItemHtmlString(data) {
         <p>
           ${data.rate}
         </p>
-        <img src="${iconSource}" alt="${ariaDescription}">
+        <img class="currency-list__icon" src="${iconSource}" alt="${ariaDescription}">
       </div>
     </li>
   `;
